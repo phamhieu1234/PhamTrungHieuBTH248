@@ -1,0 +1,7 @@
+tạo project dotnet cooree mvc
+đẩy code
+làm gtml css buuton
+làm student và empoloy
+
+
+dotnet aspnet-codegenerator controller -name MoviesController -m Movie -dc ApplicationDbContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries -sqlite
