@@ -45,7 +45,7 @@ public IActionResult Index()
         return View();
     }
  [HttpPost]
-        //giải phương trình b2
+        //giải phương trình b2, chuyên đổi kiểu dữ liệu string sang double, 
         public string giaiphuongtrinhbac2(double a, double b, double c)
         {
             string thongBao = "";
@@ -74,7 +74,7 @@ public IActionResult Index()
                     //Sử dụng phương thứ Math.Round() để làm tròn kết quả lên 2 số thập phân
                     thongBao = "Phuong trinh co nghiem duy nhat x = {0}" + (Math.Round(x1, 2));
                 }
-            
+
             }
             //nếu a != 0 thì ta bắt đầu giải phương trình bậc hai
             else
@@ -134,7 +134,3 @@ public IActionResult Index()
             return thongBao;
         }
     }
-
-    
-    
-
