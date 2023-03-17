@@ -6,19 +6,14 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
-<ItemGroup>
-   <PackageGroup Include="Microsoft.EntityFrameworkCore.SqlServer" Version="1.1.0" />
-</ItemGroup>
-
-<ItemGroup>
-  <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.4" />
-  <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.4" />
-  <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.4" />
-  <PackageReference Include="Microsoft.EntityFrameworkCore.tools" Version="7.0.4">
-    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    <PrivateAssets>all</PrivateAssets>
-  </PackageReference>
-  <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.5" />
-</ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.tools" Version="7.0.4">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.5" />
+  </ItemGroup>
 
 </Project>

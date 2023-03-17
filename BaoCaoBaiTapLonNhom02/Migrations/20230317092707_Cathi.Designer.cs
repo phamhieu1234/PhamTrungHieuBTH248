@@ -9,14 +9,27 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BaoCaoBaiTapLonNhom02.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230317034255_Student")]
-    partial class Student
+    [Migration("20230317092707_Cathi")]
+    partial class Cathi
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.4");
+
+            modelBuilder.Entity("BaoCaoBaiTapLonNhom02.Models.Cathi", b =>
+                {
+                    b.Property<string>("MaCathi")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ThoigianCathi")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("MaCathi");
+
+                    b.ToTable("Cathi");
+                });
 
             modelBuilder.Entity("BaoCaoBaiTapLonNhom02.Models.Nhom", b =>
                 {
@@ -36,6 +49,9 @@ namespace BaoCaoBaiTapLonNhom02.Migrations
                     b.Property<string>("MaID")
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("MaCathi")
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("MaNhom")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -46,6 +62,8 @@ namespace BaoCaoBaiTapLonNhom02.Migrations
 
                     b.HasKey("MaID");
 
+                    b.HasIndex("MaCathi");
+
                     b.HasIndex("MaNhom");
 
                     b.ToTable("Student");
@@ -53,11 +71,17 @@ namespace BaoCaoBaiTapLonNhom02.Migrations
 
             modelBuilder.Entity("BaoCaoBaiTapLonNhom02.Models.Student", b =>
                 {
+                    b.HasOne("BaoCaoBaiTapLonNhom02.Models.Cathi", "Cathi")
+                        .WithMany()
+                        .HasForeignKey("MaCathi");
+
                     b.HasOne("BaoCaoBaiTapLonNhom02.Models.Nhom", "Nhom")
                         .WithMany()
                         .HasForeignKey("MaNhom")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Cathi");
 
                     b.Navigation("Nhom");
                 });

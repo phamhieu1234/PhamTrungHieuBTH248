@@ -11,6 +11,18 @@ namespace BaoCaoBaiTapLonNhom02.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "Cathi",
+                columns: table => new
+                {
+                    MaCathi = table.Column<string>(type: "TEXT", nullable: false),
+                    ThoigianCathi = table.Column<string>(type: "TEXT", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Cathi", x => x.MaCathi);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Nhom",
                 columns: table => new
                 {
@@ -28,11 +40,17 @@ namespace BaoCaoBaiTapLonNhom02.Migrations
                 {
                     MaID = table.Column<string>(type: "TEXT", nullable: false),
                     Ten = table.Column<string>(type: "TEXT", nullable: false),
-                    MaNhom = table.Column<string>(type: "TEXT", nullable: false)
+                    MaNhom = table.Column<string>(type: "TEXT", nullable: false),
+                    MaCathi = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Student", x => x.MaID);
+                    table.ForeignKey(
+                        name: "FK_Student_Cathi_MaCathi",
+                        column: x => x.MaCathi,
+                        principalTable: "Cathi",
+                        principalColumn: "MaCathi");
                     table.ForeignKey(
                         name: "FK_Student_Nhom_MaNhom",
                         column: x => x.MaNhom,
@@ -40,6 +58,11 @@ namespace BaoCaoBaiTapLonNhom02.Migrations
                         principalColumn: "MaNhom",
                         onDelete: ReferentialAction.Cascade);
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Student_MaCathi",
+                table: "Student",
+                column: "MaCathi");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Student_MaNhom",
@@ -52,6 +75,9 @@ namespace BaoCaoBaiTapLonNhom02.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Student");
+
+            migrationBuilder.DropTable(
+                name: "Cathi");
 
             migrationBuilder.DropTable(
                 name: "Nhom");

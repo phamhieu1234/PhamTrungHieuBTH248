@@ -21,7 +21,7 @@ namespace BaoCaoBaiTapLonNhom02.Controllers
         // GET: Student
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.Student.Include(s => s.Nhom);
+            var applicationDbContext = _context.Student.Include(s => s.Cathi).Include(s => s.Nhom);
             return View(await applicationDbContext.ToListAsync());
         }
 
@@ -34,6 +34,7 @@ namespace BaoCaoBaiTapLonNhom02.Controllers
             }
 
             var student = await _context.Student
+                .Include(s => s.Cathi)
                 .Include(s => s.Nhom)
                 .FirstOrDefaultAsync(m => m.MaID == id);
             if (student == null)
@@ -47,7 +48,8 @@ namespace BaoCaoBaiTapLonNhom02.Controllers
         // GET: Student/Create
         public IActionResult Create()
         {
-            ViewData["MaNhom"] = new SelectList(_context.Nhom, "MaNhom", "MaNhom");
+            ViewData["MaCathi"] = new SelectList(_context.Set<Cathi>(), "MaCathi", "MaCathi");
+            ViewData["MaNhom"] = new SelectList(_context.Set<Nhom>(), "MaNhom", "MaNhom");
             return View();
         }
 
@@ -56,7 +58,7 @@ namespace BaoCaoBaiTapLonNhom02.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("MaID,Ten,MaNhom")] Student student)
+        public async Task<IActionResult> Create([Bind("MaID,Ten,MaNhom,MaCathi")] Student student)
         {
             if (ModelState.IsValid)
             {
@@ -64,7 +66,8 @@ namespace BaoCaoBaiTapLonNhom02.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["MaNhom"] = new SelectList(_context.Nhom, "MaNhom", "MaNhom", student.MaNhom);
+            ViewData["MaCathi"] = new SelectList(_context.Set<Cathi>(), "MaCathi", "MaCathi", student.MaCathi);
+            ViewData["MaNhom"] = new SelectList(_context.Set<Nhom>(), "MaNhom", "MaNhom", student.MaNhom);
             return View(student);
         }
 
@@ -81,7 +84,8 @@ namespace BaoCaoBaiTapLonNhom02.Controllers
             {
                 return NotFound();
             }
-            ViewData["MaNhom"] = new SelectList(_context.Nhom, "MaNhom", "MaNhom", student.MaNhom);
+            ViewData["MaCathi"] = new SelectList(_context.Set<Cathi>(), "MaCathi", "MaCathi", student.MaCathi);
+            ViewData["MaNhom"] = new SelectList(_context.Set<Nhom>(), "MaNhom", "MaNhom", student.MaNhom);
             return View(student);
         }
 
@@ -90,7 +94,7 @@ namespace BaoCaoBaiTapLonNhom02.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("MaID,Ten,MaNhom")] Student student)
+        public async Task<IActionResult> Edit(string id, [Bind("MaID,Ten,MaNhom,MaCathi")] Student student)
         {
             if (id != student.MaID)
             {
@@ -117,7 +121,8 @@ namespace BaoCaoBaiTapLonNhom02.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["MaNhom"] = new SelectList(_context.Nhom, "MaNhom", "MaNhom", student.MaNhom);
+            ViewData["MaCathi"] = new SelectList(_context.Set<Cathi>(), "MaCathi", "MaCathi", student.MaCathi);
+            ViewData["MaNhom"] = new SelectList(_context.Set<Nhom>(), "MaNhom", "MaNhom", student.MaNhom);
             return View(student);
         }
 
@@ -130,6 +135,7 @@ namespace BaoCaoBaiTapLonNhom02.Controllers
             }
 
             var student = await _context.Student
+                .Include(s => s.Cathi)
                 .Include(s => s.Nhom)
                 .FirstOrDefaultAsync(m => m.MaID == id);
             if (student == null)
