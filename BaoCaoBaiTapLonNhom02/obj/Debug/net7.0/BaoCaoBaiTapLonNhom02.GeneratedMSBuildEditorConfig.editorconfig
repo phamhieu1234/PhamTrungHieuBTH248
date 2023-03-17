@@ -16,6 +16,26 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = c:\Users\DELL\Desktop\ptpmql\BaoCaoBaiTapLonNhom02
 build_property._RazorSourceGeneratorDebug = 
 
+[c:/Users/DELL/Desktop/ptpmql/BaoCaoBaiTapLonNhom02/Views/Cathi/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0aGlcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/DELL/Desktop/ptpmql/BaoCaoBaiTapLonNhom02/Views/Cathi/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0aGlcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/DELL/Desktop/ptpmql/BaoCaoBaiTapLonNhom02/Views/Cathi/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0aGlcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/DELL/Desktop/ptpmql/BaoCaoBaiTapLonNhom02/Views/Cathi/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0aGlcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/DELL/Desktop/ptpmql/BaoCaoBaiTapLonNhom02/Views/Cathi/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0aGlcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [c:/Users/DELL/Desktop/ptpmql/BaoCaoBaiTapLonNhom02/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -24,12 +44,52 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[c:/Users/DELL/Desktop/ptpmql/BaoCaoBaiTapLonNhom02/Views/Nhom/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhvbVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/DELL/Desktop/ptpmql/BaoCaoBaiTapLonNhom02/Views/Nhom/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhvbVxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/DELL/Desktop/ptpmql/BaoCaoBaiTapLonNhom02/Views/Nhom/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhvbVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/DELL/Desktop/ptpmql/BaoCaoBaiTapLonNhom02/Views/Nhom/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhvbVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/DELL/Desktop/ptpmql/BaoCaoBaiTapLonNhom02/Views/Nhom/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhvbVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [c:/Users/DELL/Desktop/ptpmql/BaoCaoBaiTapLonNhom02/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [c:/Users/DELL/Desktop/ptpmql/BaoCaoBaiTapLonNhom02/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/DELL/Desktop/ptpmql/BaoCaoBaiTapLonNhom02/Views/Student/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/DELL/Desktop/ptpmql/BaoCaoBaiTapLonNhom02/Views/Student/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/DELL/Desktop/ptpmql/BaoCaoBaiTapLonNhom02/Views/Student/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/DELL/Desktop/ptpmql/BaoCaoBaiTapLonNhom02/Views/Student/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/DELL/Desktop/ptpmql/BaoCaoBaiTapLonNhom02/Views/Student/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [c:/Users/DELL/Desktop/ptpmql/BaoCaoBaiTapLonNhom02/Views/_ViewImports.cshtml]

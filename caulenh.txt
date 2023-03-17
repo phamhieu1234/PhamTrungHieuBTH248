@@ -1,0 +1,28 @@
+Các câu lệnh để chạy câu lệnh dài
+dotnet add package Microsoft.EntityFrameworkCore.Design
+dotnet add package Microsoft.EntityFrameworkCore.SQLite
+dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+dotnet restore
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+dotnet add package Microsoft.EntityFrameworkCore -v 2.1.14
+dotnet add package Microsoft.EntityFrameworkCore.tools -v 2.1.14
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer -v 2.1.14
+dotnet add package Microsoft.EntityFrameworkCore
+dotnet add package Microsoft.EntityFrameworkCore.tools
+ dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design --version 7.0.5
+dotnet add package Microsoft.EntityFrameworkCore.Sqlite
+
+
+
+
+
+
+
+
+
+
+
+
