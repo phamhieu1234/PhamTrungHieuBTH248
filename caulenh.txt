@@ -14,6 +14,8 @@ dotnet add package Microsoft.EntityFrameworkCore.tools
  dotnet add package Microsoft.EntityFrameworkCore.SqlServer
 dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design --version 7.0.5
 dotnet add package Microsoft.EntityFrameworkCore.Sqlite
+dotnet ef migrations add InitialCreate
+dotnet ef database update
 
 
 
