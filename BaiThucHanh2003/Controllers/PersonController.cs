@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using BaiThucHanh2003.Models;
+using BaiThucHanh2003.Data;
 
 namespace BaiThucHanh2003.Controllers
 {
@@ -13,13 +14,6 @@ namespace BaiThucHanh2003.Controllers
     {
         private readonly ApplicationDbContext _context;
 
-        public PersonController(object person) 
-        {
-            this.Person = person;
-               
-        }
-                public object Person { get; private set; }
-        
         public PersonController(ApplicationDbContext context)
         {
             _context = context;
@@ -38,7 +32,7 @@ namespace BaiThucHanh2003.Controllers
             var person=from b in _context.Person select b;
             if(!string.IsNullOrEmpty(PersonID))
             {
-                person=person.Where(x=> x.Title.Contains(PersonID));
+                person=person.Where(x=> x.Address.Contains(PersonID));
             }
                 return View(PersonID);
         }
