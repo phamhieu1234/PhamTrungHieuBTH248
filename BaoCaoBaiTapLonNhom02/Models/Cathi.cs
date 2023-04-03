@@ -5,6 +5,6 @@ namespace BaoCaoBaiTapLonNhom02.Models
     {
         [Key]
         public string? MaCathi{get; set;}
-        public string? ThoigianCathi{get; set;}
+        public string? TenCathi{get; set;}
     }
 }

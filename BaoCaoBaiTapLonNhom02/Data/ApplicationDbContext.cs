@@ -12,7 +12,7 @@ using BaoCaoBaiTapLonNhom02.Models;
         {
         }
 
-        public DbSet<BaoCaoBaiTapLonNhom02.Models.Student> Student { get; set; } = default!;
+        public DbSet<BaoCaoBaiTapLonNhom02.Models.SinhVien> SinhVien { get; set; } = default!;
 
         public DbSet<BaoCaoBaiTapLonNhom02.Models.Nhom> Nhom { get; set; } = default!;
 

@@ -55,7 +55,7 @@ namespace BaoCaoBaiTapLonNhom02.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("MaCathi,ThoigianCathi")] Cathi cathi)
+        public async Task<IActionResult> Create([Bind("MaCathi,TenCathi")] Cathi cathi)
         {
             if (ModelState.IsValid)
             {
@@ -87,7 +87,7 @@ namespace BaoCaoBaiTapLonNhom02.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("MaCathi,ThoigianCathi")] Cathi cathi)
+        public async Task<IActionResult> Edit(string id, [Bind("MaCathi,TenCathi")] Cathi cathi)
         {
             if (id != cathi.MaCathi)
             {
