@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using BaoCaoBaiTapLonNhom02.Models;
+using BaoCaoBaiTapLonNhom02.Data;
 
 namespace BaoCaoBaiTapLonNhom02.Controllers
 {
@@ -18,13 +19,26 @@ namespace BaoCaoBaiTapLonNhom02.Controllers
             _context = context;
         }
 
-         //GET: SinhVien
-        public async Task<IActionResult> Index()
-        {
-           var applicationDbContext = _context.SinhVien.Include(s => s.Nhom).Include(s => s.Cathi);
-          return View(await applicationDbContext.ToListAsync());
-        }
-         //GET: SinhVien/Details/5
+    public async Task<IActionResult> Index( string Nhom, string Cathi, string Ten)
+{
+    var applicationDbContext = _context.SinhVien.Include(s => s.Nhom).Include(s => s.Cathi).AsQueryable();
+    if (!string.IsNullOrEmpty(Ten))
+    {
+        applicationDbContext = applicationDbContext.Where(s => s.TenSV.Contains(Ten));
+    }
+    if (!string.IsNullOrEmpty(Cathi))
+    {
+        applicationDbContext = applicationDbContext.Where(s => s.Cathi.TenCathi.Contains(Cathi));
+    }
+    if (!string.IsNullOrEmpty(Nhom))
+    {
+        applicationDbContext = applicationDbContext.Where(s => s.Nhom.TenNhom.Contains(Nhom));
+    }
+     
+    return View(await applicationDbContext.ToListAsync());
+}
+
+        // GET: SinhVien/Details/5
         public async Task<IActionResult> Details(string id)
         {
             if (id == null || _context.SinhVien == null)

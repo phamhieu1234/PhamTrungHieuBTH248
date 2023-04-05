@@ -10,14 +10,46 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BaoCaoBaiTapLonNhom02.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230403023117_SinhVien")]
-    partial class SinhVien
+    [Migration("20230404013452_DangNhap")]
+    partial class DangNhap
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.4");
+
+            modelBuilder.Entity("BaoCaoBaiTapLonNhom01.Models.DangNhap", b =>
+                {
+                    b.Property<int>("UserID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("username")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("UserID");
+
+                    b.ToTable("DangNhap");
+                });
+
+            modelBuilder.Entity("BaoCaoBaiTapLonNhom02.Models.Cathi", b =>
+                {
+                    b.Property<string>("MaCathi")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("TenCathi")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("MaCathi");
+
+                    b.ToTable("Cathi");
+                });
 
             modelBuilder.Entity("BaoCaoBaiTapLonNhom02.Models.Nhom", b =>
                 {
@@ -38,6 +70,9 @@ namespace BaoCaoBaiTapLonNhom02.Migrations
                         .HasMaxLength(250)
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("MaCathi")
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("MaNhom")
                         .HasColumnType("TEXT");
 
@@ -48,6 +83,8 @@ namespace BaoCaoBaiTapLonNhom02.Migrations
 
                     b.HasKey("MaSV");
 
+                    b.HasIndex("MaCathi");
+
                     b.HasIndex("MaNhom");
 
                     b.ToTable("SinhVien");
@@ -55,9 +92,15 @@ namespace BaoCaoBaiTapLonNhom02.Migrations
 
             modelBuilder.Entity("BaoCaoBaiTapLonNhom02.Models.SinhVien", b =>
                 {
+                    b.HasOne("BaoCaoBaiTapLonNhom02.Models.Cathi", "Cathi")
+                        .WithMany()
+                        .HasForeignKey("MaCathi");
+
                     b.HasOne("BaoCaoBaiTapLonNhom02.Models.Nhom", "Nhom")
                         .WithMany()
                         .HasForeignKey("MaNhom");
+
+                    b.Navigation("Cathi");
 
                     b.Navigation("Nhom");
                 });

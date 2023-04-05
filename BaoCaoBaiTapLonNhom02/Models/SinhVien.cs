@@ -24,5 +24,5 @@ namespace BaoCaoBaiTapLonNhom02.Models;
         public string? MaCathi{get; set;}
        [ForeignKey("MaCathi")]
        public Cathi? Cathi{get; set;}
-    public object Title { get; internal set; }
+   
 }

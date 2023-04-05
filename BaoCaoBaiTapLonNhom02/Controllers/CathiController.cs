@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using BaoCaoBaiTapLonNhom02.Models;
+using BaoCaoBaiTapLonNhom02.Data;
 
 namespace BaoCaoBaiTapLonNhom02.Controllers
 {
