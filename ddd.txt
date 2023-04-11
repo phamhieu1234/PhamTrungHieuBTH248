@@ -4,4 +4,4 @@ làm gtml css buuton
 làm student và empoloy
 
 
-dotnet aspnet-codegenerator controller -name MoviesController -m Movie -dc ApplicationDbContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries -sqlite
+dotnet aspnet-codegenerator controller -name DangNhapController -m DangNhap -dc ApplicationDbContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries -sqlite

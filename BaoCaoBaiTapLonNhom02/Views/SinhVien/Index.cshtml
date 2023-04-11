@@ -3,21 +3,33 @@
 @{
     ViewData["Title"] = "Index";
 }
-
 <h1>Danh sách Sinh viên đăng ký</h1>
 
 <p>
     <a asp-action="Create">Thêm sinh viên</a>
 </p>
 <form asp-action="Index" method="get" class="form-inline">
+    <label for="Ten">Tìm kiếm theo Tên Sinh Viên:</label>
+     <input type="text" name="Ten" />
     <label for="Nhom">Tìm kiếm theo Nhóm:</label>
     <input type="text" name="Nhom" />
     <label for="Cathi">Tìm kiếm theo Ca thi:</label>
     <input type="text" name="Cathi" />
-      <label for="Ten">Tìm kiếm theo Tên Sinh Viên:</label>
-     <input type="text" name="Ten" />
-    <button>Tìm kiếm</button>
-
+    <button class="button button2">Tìm kiếm</button>
+<style>
+    .button{
+        background-color:#4CAF50;
+        border: 2%;
+        color: white;
+        padding: 10px 12px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 2px 2px;
+        cursor: pointer;
+    }
+</style>
 </form>
 <br>
 <table class="table table-bordered table-danger">
@@ -35,6 +47,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.Cathi)
             </th>
+           
             <th></th>
         </tr>
     </thead>
@@ -53,8 +66,9 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Cathi.MaCathi)
             </td>
+           
             <td class="view-bang">
-                <a clas="c1c" asp-action="Edit" asp-route-id="@item.MaSV">Sửa</a> |
+                <a class="c1c" asp-action="Edit" asp-route-id="@item.MaSV">Sửa</a> |
                 <a class="c2c" asp-action="Details" asp-route-id="@item.MaSV">Chi tiết</a> |
                 <a class="c3c" asp-action="Delete" asp-route-id="@item.MaSV">Xóa</a>
             </td>

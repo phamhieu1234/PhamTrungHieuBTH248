@@ -15,11 +15,14 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+        
         return View();
     }
+   
 
     public IActionResult Privacy()
     {
+        ViewBag.thongbao = "Bạn đã đăng ký thành công";
         return View();
     }
 

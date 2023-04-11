@@ -7,11 +7,13 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using BaoCaoBaiTapLonNhom02.Models;
 using BaoCaoBaiTapLonNhom02.Data;
+using BaoCaoBaiTapLonNhom02.Models.Process;
 
 namespace BaoCaoBaiTapLonNhom02.Controllers
 {
     public class SinhVienController : Controller
     {
+        StringProcess strPro = new StringProcess();
         private readonly ApplicationDbContext _context;
 
         public SinhVienController(ApplicationDbContext context)
@@ -34,6 +36,7 @@ namespace BaoCaoBaiTapLonNhom02.Controllers
     {
         applicationDbContext = applicationDbContext.Where(s => s.Nhom.TenNhom.Contains(Nhom));
     }
+    
      
     return View(await applicationDbContext.ToListAsync());
 }
@@ -60,8 +63,20 @@ namespace BaoCaoBaiTapLonNhom02.Controllers
         // GET: SinhVien/Create
         public IActionResult Create()
         {
+             var newMaSV = "";
+            if (_context.SinhVien.Count() == 0)
+            {
+                newMaSV = "CNTT1921001";
+            }
+            else
+            {
+                var id = _context.SinhVien.OrderByDescending(m =>m.MaSV).First().MaSV;
+                newMaSV = strPro.AutoGenerateKey(id);
+            }
+            ViewBag.SinhVien = newMaSV;
             ViewData["MaNhom"] = new SelectList(_context.Set<Nhom>(), "MaNhom", "MaNhom");
             ViewData["MaCathi"] = new SelectList(_context.Set<Cathi>(), "MaCathi", "MaCathi");
+
             return View();
         }
 
@@ -81,6 +96,7 @@ namespace BaoCaoBaiTapLonNhom02.Controllers
             ViewData["MaNhom"] = new SelectList(_context.Set<Nhom>(), "MaNhom", "MaNhom", sinhVien.MaNhom);
             ViewData["MaCathi"] = new SelectList(_context.Set<Cathi>(), "MaCathi", "MaCathi", sinhVien.MaCathi);
             return View(sinhVien);
+            
         }
 
         // GET: SinhVien/Edit/5

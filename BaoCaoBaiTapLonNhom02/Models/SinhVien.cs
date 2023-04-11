@@ -17,12 +17,15 @@ namespace BaoCaoBaiTapLonNhom02.Models;
         [StringLength(250)]
          public string TenSV { get; set; }
 
+         [Display(Name ="Nhóm")]
         public string? MaNhom{get; set;}
        [ForeignKey("MaNhom")]
        public Nhom? Nhom{get; set;}
        
         public string? MaCathi{get; set;}
        [ForeignKey("MaCathi")]
+        [Display(Name ="Ca thi")]
        public Cathi? Cathi{get; set;}
+       
    
 }
