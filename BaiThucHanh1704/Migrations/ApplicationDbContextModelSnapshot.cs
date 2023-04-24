@@ -15,6 +15,24 @@ namespace BaiThucHanh1704.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.5");
 
+            modelBuilder.Entity("BaiThucHanh1704.Models.Employee", b =>
+                {
+                    b.Property<string>("EmployeeID")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("EmployeeName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("EmployeeID");
+
+                    b.ToTable("Employee");
+                });
+
             modelBuilder.Entity("BaiThucHanh1704.Models.Faculty", b =>
                 {
                     b.Property<string>("FacultyID")

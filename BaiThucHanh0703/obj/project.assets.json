@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DELL\\Desktop\\ptpmql\\BaiThucHanh0703\\BaiThucHanh0703.csproj",
+      "projectUniqueName": "c:\\Users\\DELL\\Desktop\\ptpmql\\BaiThucHanh0703\\BaiThucHanh0703.csproj",
       "projectName": "BaiThucHanh0703",
-      "projectPath": "C:\\Users\\DELL\\Desktop\\ptpmql\\BaiThucHanh0703\\BaiThucHanh0703.csproj",
+      "projectPath": "c:\\Users\\DELL\\Desktop\\ptpmql\\BaiThucHanh0703\\BaiThucHanh0703.csproj",
       "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DELL\\Desktop\\ptpmql\\BaiThucHanh0703\\obj\\",
+      "outputPath": "c:\\Users\\DELL\\Desktop\\ptpmql\\BaiThucHanh0703\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -62,7 +62,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

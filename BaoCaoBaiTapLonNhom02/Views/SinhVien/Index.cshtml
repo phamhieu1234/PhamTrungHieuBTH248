@@ -6,7 +6,24 @@
 <h1>Danh sách Sinh viên đăng ký</h1>
 
 <p>
-    <a asp-action="Create">Thêm sinh viên</a>
+    <form asp-action="Create">
+        <button class="button button1">Thêm sinh viên</button>
+     <style>
+        .button1{
+        background-color:#4CAF50;
+        border: none;
+        border-radius: 12px;
+        color: black;
+        padding: 10px 12px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 2px 2px;
+        cursor: pointer;
+        }
+        </style>
+    </form>
 </p>
 <form asp-action="Index" method="get" class="form-inline">
     <label for="Ten">Tìm kiếm theo Tên Sinh Viên:</label>
@@ -19,7 +36,8 @@
 <style>
     .button{
         background-color:#4CAF50;
-        border: 2%;
+        border: none;
+        border-radius: 12px;
         color: white;
         padding: 10px 12px;
         text-align: center;

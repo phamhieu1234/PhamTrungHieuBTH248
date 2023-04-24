@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CLYvsqAQKvYxE9+GmNxFSeVQpcjG6r4AkXeERibF85Zb3maXbtqNqa0Z0pacJaHza4KZAcKe7DBSJz4NbDKe/A==",
+  "dgSpecHash": "kcfwW5sUwlOflBI5oxJNWdGkFeWiL4OzaDI5MW0DiJIbvxnejxjQgnvm2Dp3WkdnwrIntZoAGy5DGAxkHeROiA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DELL\\Desktop\\ptpmql\\BaiThucHanh2003\\BaiThucHanh2003.csproj",
+  "projectFilePath": "c:\\Users\\DELL\\Desktop\\ptpmql\\BaiThucHanh2003\\BaiThucHanh2003.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DELL\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

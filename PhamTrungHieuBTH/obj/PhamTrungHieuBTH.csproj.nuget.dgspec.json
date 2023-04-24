@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DELL\\Desktop\\ptpmql\\PhamTrungHieuBTH\\PhamTrungHieuBTH.csproj": {}
+    "c:\\Users\\DELL\\Desktop\\ptpmql\\PhamTrungHieuBTH\\PhamTrungHieuBTH.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DELL\\Desktop\\ptpmql\\PhamTrungHieuBTH\\PhamTrungHieuBTH.csproj": {
+    "c:\\Users\\DELL\\Desktop\\ptpmql\\PhamTrungHieuBTH\\PhamTrungHieuBTH.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL\\Desktop\\ptpmql\\PhamTrungHieuBTH\\PhamTrungHieuBTH.csproj",
+        "projectUniqueName": "c:\\Users\\DELL\\Desktop\\ptpmql\\PhamTrungHieuBTH\\PhamTrungHieuBTH.csproj",
         "projectName": "PhamTrungHieuBTH",
-        "projectPath": "C:\\Users\\DELL\\Desktop\\ptpmql\\PhamTrungHieuBTH\\PhamTrungHieuBTH.csproj",
+        "projectPath": "c:\\Users\\DELL\\Desktop\\ptpmql\\PhamTrungHieuBTH\\PhamTrungHieuBTH.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL\\Desktop\\ptpmql\\PhamTrungHieuBTH\\obj\\",
+        "outputPath": "c:\\Users\\DELL\\Desktop\\ptpmql\\PhamTrungHieuBTH\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -56,7 +56,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

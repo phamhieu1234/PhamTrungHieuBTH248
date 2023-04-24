@@ -15,4 +15,7 @@ using BaiThucHanh1004.Models;
         public DbSet<BaiThucHanh1004.Models.Student> Student { get; set; } = default!;
 
         public DbSet<BaiThucHanh1004.Models.Employee> Employee { get; set; } = default!;
+
+        public DbSet<BaiThucHanh1004.Models.Faculty> Faculty { get; set; } = default!;
+        public DbSet<BaiThucHanh1004.Models.Person> Person { get; set; } = default!;
     }

@@ -17,4 +17,6 @@ using BaiThucHanh1704.Models;
         public DbSet<BaiThucHanh1704.Models.Faculty> Faculty { get; set; } = default!;
 
         public DbSet<BaiThucHanh1704.Models.Person> Person { get; set; } = default!;
+
+        public DbSet<BaiThucHanh1704.Models.Employee> Employee { get; set; } = default!;
     }
