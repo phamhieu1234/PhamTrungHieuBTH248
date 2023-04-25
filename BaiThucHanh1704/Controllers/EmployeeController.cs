@@ -6,12 +6,14 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using BaiThucHanh1704.Models;
+using BaiThucHanh1704.Models.Process;
 
 namespace BaiThucHanh1704.Controllers
 {
     public class EmployeeController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private ExcelProcess _excelProcess = new ExcelProcess();
 
         public EmployeeController(ApplicationDbContext context)
         {
@@ -21,9 +23,9 @@ namespace BaiThucHanh1704.Controllers
         // GET: Employee
         public async Task<IActionResult> Index()
         {
-              return _context.Employee != null ? 
-                          View(await _context.Employee.ToListAsync()) :
-                          Problem("Entity set 'ApplicationDbContext.Employee'  is null.");
+            return _context.Employee != null ?
+                        View(await _context.Employee.ToListAsync()) :
+                        Problem("Entity set 'ApplicationDbContext.Employee'  is null.");
         }
 
         // GET: Employee/Details/5
@@ -149,14 +151,62 @@ namespace BaiThucHanh1704.Controllers
             {
                 _context.Employee.Remove(employee);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool EmployeeExists(string id)
         {
-          return (_context.Employee?.Any(e => e.EmployeeID == id)).GetValueOrDefault();
+            return (_context.Employee?.Any(e => e.EmployeeID == id)).GetValueOrDefault();
+        }
+        public async Task<IActionResult> Upload()
+        {
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Upload(IFormFile file)
+        {
+            if (file != null)
+            {
+                string fileExtension = Path.GetExtension(file.FileName);
+                if (fileExtension != ".xls" && fileExtension != ".xlsx")
+                {
+                    ModelState.AddModelError("", "Please choose excel file to upload!");
+                }
+                else
+                {
+                    //rename file when upload to sever
+                    var fileName = DateTime.Now.ToShortTimeString() + fileExtension;
+                    var filePath = Path.Combine(Directory.GetCurrentDirectory() + "/Uploads/Excels", fileName);
+                    var fileLocation = new FileInfo(filePath).ToString();
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        //save file to server
+                        await file.CopyToAsync(stream);
+                        //read data from file and write to database
+                        var dt = _excelProcess.ExcelToDataTable(fileLocation);
+                        //using for loop to read data form dt
+                        for (int i = 0; i < dt.Rows.Count; i++)
+                        {
+                            //create a new Person object
+                            var ser = new Employee();
+                            //set values for attribiutes
+                            ser.EmployeeID = dt.Rows[i][0].ToString();
+                            ser.EmployeeName = dt.Rows[i][1].ToString();
+                            ser.Address = dt.Rows[i][2].ToString();
+                            //add oject to context
+                            _context.Employee.Add(ser);
+                        }
+                        //save to database
+                        await _context.SaveChangesAsync();
+                        return RedirectToAction(nameof(Index));
+                    }
+                }
+            }
+
+            return null;
         }
     }
 }
