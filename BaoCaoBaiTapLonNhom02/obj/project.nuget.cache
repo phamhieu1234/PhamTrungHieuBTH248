@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RhBkY6LzBUWRBOarB7Ylf3QLGWjUsToydW2VhOKunv+kupvlEqQgdWb15qah1NaiTfuJIelAFRAqqGA8MZpoUw==",
+  "dgSpecHash": "EVgBcWSVLhd7GvlQ7JtVVqrynxnqpJZcdAVDzGcFodLfT+T6UIYDgAoMpy/KCuYwscRH65CFU/JedmNwfujbyQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DELL\\Desktop\\ptpmql\\BaoCaoBaiTapLonNhom02\\BaoCaoBaiTapLonNhom02.csproj",
+  "projectFilePath": "c:\\Users\\DELL\\Desktop\\ptpmql\\BaoCaoBaiTapLonNhom02\\BaoCaoBaiTapLonNhom02.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DELL\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\6.0.11\\microsoft.aspnetcore.razor.language.6.0.11.nupkg.sha512",
